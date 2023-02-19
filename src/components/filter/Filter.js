@@ -79,7 +79,7 @@ const Filter = ({ setData }) => {
             label="Price"
             onChange={(e) => setPrice(e.target.value)}
           >
-            <MenuItem value={0}>None</MenuItem>
+            <MenuItem value={0}>-</MenuItem>
             <MenuItem value={1}>$500-$1000</MenuItem>
             <MenuItem value={2}>$1001-$1500</MenuItem>
             <MenuItem value={3}>$1501-$2000</MenuItem>
@@ -97,7 +97,7 @@ const Filter = ({ setData }) => {
             label="Property Type"
             onChange={(e) => setProperty(e.target.value)}
           >
-            <MenuItem value={0}>None</MenuItem>
+            <MenuItem value={0}>-</MenuItem>
             <MenuItem value={1}>Apartments</MenuItem>
             <MenuItem value={2}>Bungalow</MenuItem>
             <MenuItem value={3}>Houses</MenuItem>
