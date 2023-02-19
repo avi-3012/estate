@@ -65,7 +65,6 @@ const data = [
       bath: 2,
       area: "4x6.5",
     },
-    featured: true,
   },
   {
     id: "house4",
@@ -82,7 +81,6 @@ const data = [
       bath: 1,
       area: "3x4",
     },
-    featured: true,
   },
   {
     id: "bungalow2",
