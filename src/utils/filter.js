@@ -1,5 +1,9 @@
 import moment from "moment";
 
+// filters data from an array and returns a filtered data list
+// takes two arguments: data and filters
+// data is the array of objects to be filtered
+// filters is an object with the required parameters
 const filter = (data, filters) => {
   try {
     const { price, property, location, date } = filters;

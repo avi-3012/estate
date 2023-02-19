@@ -4,6 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 const Menu = () => {
   const loc = useLocation();
   const path = loc.pathname;
+
+  //for style
   const active = "bg-[#efe6fc] text-[#6800d9]";
   const inactive = "text-[#000]";
   const rent = path === "/rent" ? active : inactive;

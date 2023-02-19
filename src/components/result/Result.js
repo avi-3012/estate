@@ -3,6 +3,7 @@ import React from "react";
 //components
 import ItemCard from "../itemCard/ItemCard";
 
+//Result component which maps data passed through props with the help of ItemCard component
 const Result = ({ data }) => {
   try {
     return (

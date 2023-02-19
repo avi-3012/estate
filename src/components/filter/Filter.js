@@ -1,4 +1,7 @@
 import React from "react";
+import { DataContext } from "../../dataContext";
+
+//components
 import {
   FormControl,
   InputLabel,
@@ -9,26 +12,21 @@ import {
 } from "@mui/material";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
-import moment from "moment";
-import { DataContext } from "../../dataContext";
-import { filter } from "../../utils/filter";
 
+//utils
+import { filter } from "../../utils/filter";
+import moment from "moment";
+
+//FILTER COMPONENT
 const Filter = ({ setData }) => {
+  //variable states
   const [price, setPrice] = React.useState(0);
   const [property, setProperty] = React.useState(0);
   const [location, setLocation] = React.useState("");
   const [date, setDate] = React.useState(moment());
   var data = React.useContext(DataContext);
 
-  React.useEffect(() => {
-    console.log("Price: ", price);
-    console.log("Property: ", property);
-    console.log("Location: ", location);
-    console.log("Date: ", moment(date).format("ll"));
-    // console.log(date.diff(moment("02-23-2023"), "days"));
-    console.log(moment(date).unix());
-  });
-
+  //function to handle submit
   const handleSubmit = () => {
     const filters = {
       price: price,
@@ -36,9 +34,11 @@ const Filter = ({ setData }) => {
       location: location,
       date: date,
     };
+    //invokes the filter function from utils/filter.js
     const result = filter(data, filters);
     console.log("Result: FILTERED: ", result);
     if (result) {
+      //sets the data state to the result of the filter function
       setData(result);
     }
   };

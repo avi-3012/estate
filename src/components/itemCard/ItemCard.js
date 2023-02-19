@@ -1,4 +1,6 @@
 import React from "react";
+
+//assets
 import PopularIcon from "../../assets/icons/popular-icon.png";
 import BedIcon from "../../assets/icons/bed-icon.png";
 import BathIcon from "../../assets/icons/bathroom-icon.png";
@@ -6,7 +8,9 @@ import AreaIcon from "../../assets/icons/area-icon.png";
 import SaveIconFalse from "../../assets/icons/save-icon-false.png";
 import SaveIconTrue from "../../assets/icons/save-icon-true.png";
 
+//ITEM CARD COMPONENT which takes single item as a prop and renders the item card
 const ItemCard = ({ item }) => {
+  //for handling save icon click
   const [saveIcon, setSaveIcon] = React.useState(SaveIconFalse);
   const handleSaveClick = () => {
     if (saveIcon === SaveIconFalse) {
