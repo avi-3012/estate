@@ -6,7 +6,7 @@ import AreaIcon from "../../assets/icons/area-icon.png";
 import SaveIconFalse from "../../assets/icons/save-icon-false.png";
 import SaveIconTrue from "../../assets/icons/save-icon-true.png";
 
-const ItemCard = ({ item, image }) => {
+const ItemCard = ({ item }) => {
   const [saveIcon, setSaveIcon] = React.useState(SaveIconFalse);
   const handleSaveClick = () => {
     if (saveIcon === SaveIconFalse) {
@@ -21,7 +21,7 @@ const ItemCard = ({ item, image }) => {
         <div className="flex flex-col justify-between">
           <div
             className="w-[250px] h-32 bg-cover bg-no-repeat bg-center rounded-t-lg overflow-visible"
-            style={{ backgroundImage: `url(${image.src.medium})` }}
+            style={{ backgroundImage: `url(${item.image})` }}
           >
             {item.featured ? (
               <div
