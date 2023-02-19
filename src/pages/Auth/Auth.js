@@ -11,7 +11,7 @@ const Auth = () => {
     } else if (type === "signup") {
       setPage("Sign Up");
     } else {
-      setPage("Error");
+      window.location.href = "/404";
     }
   }, [type]);
 
