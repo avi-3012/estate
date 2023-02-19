@@ -32,7 +32,9 @@ const filter = (data, filters) => {
         }
       }
       if (location !== "") {
-        if (item.location.toLowercase().includes(location.toLowercase())) {
+        if (
+          String(item.location).toLowerCase().includes(location.toLowerCase())
+        ) {
           return true;
         }
         if (item.location !== location) {
@@ -47,7 +49,9 @@ const filter = (data, filters) => {
       return true;
     });
     return result;
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
   return null;
 };
 
