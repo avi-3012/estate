@@ -132,7 +132,7 @@ const data = [
     id: "bungalow3",
     title: "Bungalow 3",
     price: 1800,
-    location: "New Delhi",
+    location: "New York",
     image:
       "https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&h=350",
     description: "This is a Bungalow",
@@ -148,7 +148,7 @@ const data = [
     id: "apartment3",
     title: "Apartment 3",
     price: 1400,
-    location: "New Delhi",
+    location: "London",
     image:
       "https://images.pexels.com/photos/2183521/pexels-photo-2183521.jpeg?auto=compress&cs=tinysrgb&h=350",
     description: "This is an Apartment",
